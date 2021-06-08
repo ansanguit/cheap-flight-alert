@@ -15,7 +15,7 @@ if info[0]['iataCode'] == "":
     flight= FlightSearch()
     for city in info:
         city["iataCode"] = flight.get_destination_code(city["city"])
-        print(f"info:\n{info}")
+    print(info)
 
     data.destination_data = info
     data.update_codes()
