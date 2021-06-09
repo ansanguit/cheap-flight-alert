@@ -1,5 +1,7 @@
 
 import requests
+from flight_data import FlightData
+
 
 
 SHEET_END= "https://api.sheety.co/1c5fc36e34c5fd06214a7441304005d2/flightDeals/prices"
@@ -24,4 +26,5 @@ class DataManager:
 
              response = requests.put(url= f"{SHEET_END}/{city['id']}", json= params)
              print(response.text)
+
 
